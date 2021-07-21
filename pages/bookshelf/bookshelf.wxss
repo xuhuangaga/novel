@@ -1,0 +1,41 @@
+.edit {
+  width: 30px;
+  height: 30px;
+}
+
+.help {
+  border-radius: 15rpx;
+  border: 1px solid #7f7f7f;
+  padding: 10rpx 20rpx;
+  margin-right: 20rpx;
+}
+
+.clear {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 0;
+  right: 10rpx;
+  display: none;
+}
+
+.block {
+  display: block;
+}
+.d-b-title {
+  height: 85rpx;
+}
+.move {
+  animation: move 1s infinite linear;
+}
+@keyframes move {
+  0% {
+   transform: rotate(0deg);
+  }
+  50% {
+   transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

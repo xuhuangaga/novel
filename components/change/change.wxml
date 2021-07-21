@@ -1,0 +1,7 @@
+<view class="flex-j-between a-center wbfb m-t10 m-b10">
+  <view>{{text}}</view>
+  <view class="flex-a-center"  bindtap="change">
+    <image src="../../assets/images/search_sx.png" class="clear_img m-r5"></image>
+    <view class="tc_orange">换一换</view>
+  </view>
+</view>

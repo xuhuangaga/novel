@@ -1,0 +1,7 @@
+<view class="f-size14 m-b10">
+  <tabs arr="{{arr}}" bindactive="active" activeIndex="{{activeIndex}}" class="p_fixed wbfb"></tabs>
+  <view class="m-t-tabs">
+    <classify wx:if="{{activeIndex===0}}"></classify>
+    <ranking wx:else></ranking>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "classify":"../../components/books/classify/classify",
+    "ranking":"../../components/books/ranking/ranking",
+    "tabs":"../../components/tabs/tabs"
+  },
+  "navigationBarTitleText": "书城"
+}

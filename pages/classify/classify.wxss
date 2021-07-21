@@ -1,0 +1,16 @@
+.activeItem {
+  color: #cb1c36;
+}
+.tag_dv {
+  border-radius: 6rpx;
+  width: max-content;
+}
+.top_tab {
+  top: 0;
+}
+.con_dv {
+  margin-top: 160rpx;
+}
+.con_dv1 {
+  margin-top: 80rpx;
+}

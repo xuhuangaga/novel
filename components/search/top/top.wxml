@@ -1,0 +1,5 @@
+<view class="tc_6 flex-a-center search_ipt_dv  p-relative">
+  <image src="../../../assets/images/search_ipt.png" class="search_img {{!clearShow?'clearImgShow':'clearImgHide'}}"></image>
+  <input class="search_ipt t-a-center wbfb" placeholder="请输入书名或作者名" bindinput="inputListener" placeholder-style="color:#999" confirm-type ="search" bindconfirm="confirm" value="{{searchValue}}" type='text'/>
+  <image src="../../../assets/images/close.png" class="close_img {{clearShow?'clearImgShow':'clearImgHide'}}" catchtap="clearValue"></image>
+</view>

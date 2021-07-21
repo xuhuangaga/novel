@@ -1,0 +1,9 @@
+@import "../../../styles/common.wxss";
+.class_dv {
+  width: 27.27%;
+  border: 1px solid #eee;
+  margin: 0rpx 2rpx 2rpx 0rpx;
+}
+.class_dv:nth-child(3n) {
+  margin-right: 0rpx !important;
+}

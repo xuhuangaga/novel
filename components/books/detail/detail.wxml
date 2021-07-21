@@ -1,0 +1,18 @@
+<view class="p-10 f-size14">
+  <view class="lh30">
+    简介:{{detail}}
+  </view>
+  <view class="catalogue flex-j-center a-center tc_9 lh30">
+    <image src="../../../assets/images/catalogue.png"></image>
+    <view class="m-l10">总目录(<text class="f-size12">{{catalogue}}</text>章)</view>
+  </view>
+  <view wx:if="{{ranDomArr.length>0}}">
+    <change bindchange="change" text="看过这本书的人还在看"></change>
+    <view class="flex-a-center m-b10">
+      <view wx:for="{{ranDomArr}}" wx:key="index" bindtap="goto" data-id="{{item._id}}" class="m-r5">
+        <image src="{{imgUrl+item.cover}}" class="bookshelf" v-if="{{item.cover}}"></image>
+        <view class="t-a-center f-size12 d-b-title">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+</view>

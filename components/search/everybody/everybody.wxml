@@ -1,0 +1,4 @@
+<change bindchange="change"></change>
+<view class="flex-a-center f-wrap">
+<view wx:for="{{list}}" wx:key="index" class="p-5 f-c-w word_dv f-size14" style="background-color:{{randomBgc[item]}}" bindtap="clickWord" data-item="{{arr[item]}}">{{arr[item].word}}</view>
+</view>

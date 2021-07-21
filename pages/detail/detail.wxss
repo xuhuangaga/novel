@@ -1,0 +1,64 @@
+.detail_img {
+  width: 280rpx;
+  height: 400rpx;
+  position: absolute;
+  top: 0rpx;
+}
+
+.bgc_color {
+  background: #cb1c36;
+  height: 160rpx;
+}
+
+.d_title {
+  margin-top: 260rpx;
+}
+
+.d_bottom {
+  background-color: #f7f7f7;
+  margin-top: -45rpx;
+  padding-top: 60rpx;
+  border-top: 1px solid #ccc;
+  padding-bottom: 60rpx;
+}
+
+.readgo,.add {
+  border-radius: 40rpx;
+  padding: 20rpx 0rpx;
+  width: 35%;
+}
+
+.readgo {
+ background: #ec304c;
+}
+
+.add {
+  border: 1px solid #ccc;
+}
+.update {
+  color: #78e7dc;
+}
+.index_dv {
+  background: #fff !important;
+}
+.star {
+  width: 50rpx;
+  height: 50rpx;
+}
+.big_img {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.big_img image {
+  width: 480rpx;
+  height: 700rpx;
+}
+.detail_dv {
+  overflow-y: scroll;
+  height: 700rpx;
+}

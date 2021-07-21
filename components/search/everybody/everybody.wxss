@@ -1,0 +1,4 @@
+@import '../../../styles/common';
+.word_dv {
+  margin: 0rpx 10rpx 10rpx 0rpx;
+}

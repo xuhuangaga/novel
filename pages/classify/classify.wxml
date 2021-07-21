@@ -1,0 +1,34 @@
+<view class="f-size14">
+  <view class="p_fixed wbfb bc-w top_tab">
+    <view class="border_b p-10 flex-a-center tc_6">
+      <view class="{{activeTypeIndex===index?'tc_theme':''}} m-r-5" wx:for="{{typeList}}" wx:key="index"
+        bindtap="activeType" data-index="{{index}}">{{item.name}}</view>
+    </view>
+    <scroll-view scroll-x="true" class="wbfb flex-a-center">
+      <view class="border_b p-10 flex-a-center tc_6" wx:if="{{minro}}">
+        <view class="{{activeMinroIndex===index?'tc_theme':''}} m-r-5" wx:for="{{minro}}" wx:key="index"
+          bindtap="activeMinro" data-index="{{index}}">{{item}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view wx:if="{{books.length>0}}" class="p-10 {{minro?'con_dv':'con_dv1'}}">
+    <view class="flex-j-between m-b10 search_item border_b p-b10" wx:for="{{books}}" wx:key="index" bindtap="goto"
+      data-id="{{item._id}}">
+      <view class="book_img">
+        <image class="wbfb hbfb" src="{{imgUrl+item.cover}}"></image>
+      </view>
+      <view class="m-l10 lh20 content_dv">
+        <view>{{item.title}}</view>
+        <view class="f-size12 p-tb10 t_c ">{{item.author}}</view>
+        <view class="f-size12 sl-three t_c ">{{item.shortIntro}}</view>
+        <view class="f-c-w flex m-t10" wx:if="{{item.tags.length>0}}">
+          <view wx:for="{{item.tags}}" wx:key="i" wx:for-index="i" style="background-color:{{tagBgc[i]}};"
+            class="tag_dv m-r5 t-a-center p-l-r5" wx:if="{{i<3}}">
+           {{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="f-size12 tc_9 m-t10 t-a-center">{{noDataText}}</view>
+  </view>
+  <view wx:else class="f-size12 tc_9 m-t10 t-a-center {{minro?'con_dv':'con_dv1'}}">暂无数据...</view>
+</view>

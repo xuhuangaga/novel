@@ -1,0 +1,28 @@
+@import '../../../styles/common';
+.search_ipt {
+  padding: 15rpx;
+  width: 85%;
+}
+.search_ipt_dv {
+  padding-left: 60rpx;
+  background-color: #eee;
+  border-radius: 30rpx;
+}
+.search_ipt_dv image{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+}
+.search_img {
+  left: 160rpx;
+}
+.close_img {
+  right: 30rpx;
+  z-index: 999;
+}
+.clearImgHide {
+  display: none;
+}
+.clearImgShow {
+  display:block;
+}

@@ -1,0 +1,9 @@
+.fc_title {
+  color: #333;
+}
+.fc_content {
+  color: #666;
+}
+.text_idx {
+  text-indent: 18px;
+}

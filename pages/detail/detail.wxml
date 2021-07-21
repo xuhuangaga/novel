@@ -1,0 +1,37 @@
+<view wx:if="{{info}}">
+  <!-- 图片 -->
+  <view class="flex-j-center a-center p-relative">
+    <view class="bgc_color wbfb"></view>
+    <image src="{{imgUrl+info.cover}}" class="detail_img" bindtap="changeBigImg"></image>
+  </view>
+  <!-- 书籍名称 -->
+  <view class="t-a-center d_title">{{info.title}}</view>
+  <!-- 作者 -->
+  <view class="t-a-center t_c m-t-b10">{{info.author}}</view>
+  <!-- 开始阅读 加入书签 -->
+  <view class="flex-j-around f-c-w">
+    <view class="readgo flex-j-center a-center" bindtap="readgo">开始阅读</view>
+    <view class="add flex-j-center a-center bc-w tc_9" bindtap="add">{{text}}</view>
+  </view>
+  <view class="d_bottom hbfb">
+    <view class="t-a-center t_c m-t10">
+      <image class="star" wx:for="{{starShow}}" wx:key="index" src="../../assets/images/star_show.png"></image>
+      <image class="star" wx:for="{{starHide}}" wx:key="index" src="../../assets/images/star_hide.png"></image>
+    </view>
+    <view class="t-a-center m-b10 f-size14">更新至 <text class="update">{{info.lastChapter}}</text></view>
+    <!-- 详情 评价 -->
+    <view class="m-lr10 bc-w">
+      <tabs arr="{{arr}}" bgc="#fff" total="{{total}}" bindactive="active" activeIndex="{{activeIndex}}"
+        borderB="1px solid #eee"></tabs>
+      <view wx:if="{{activeIndex===0}}" class="bc-w detail_dv">
+        <detail detail="{{info.longIntro}}" catalogue="{{catalogue}}" imgUrl="{{imgUrl}}" booksId="{{id}}"></detail>
+      </view>
+      <view wx:else class="detail_dv">
+        <comment wx-if="{{comment}}" bindloadMore="loadMore" comment="{{comment}}" imgUrl="{{imgUrl}}" noDataText="{{noDataText}}"></comment>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{bigImgShow}}" class="big_img flex-j-center a-center" bindtap="changeBigImg">
+    <image src="{{imgUrl+info.cover}}" bindlongpress="saveImg" data-url="{{imgUrl+info.cover}}"></image>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+@import "../../../styles/common.wxss";
+.head_pic {
+  border-radius: 100%;
+  width: 100rpx;
+  height: 100rpx;
+}
+.nickname {
+  color: #ff6347;
+}

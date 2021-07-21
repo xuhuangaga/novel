@@ -1,0 +1,16 @@
+<scroll-view scroll-y="true" class="hbfb" bindscrolltolower="scrolltolower" binddragging="dragging">
+  <view class="p-10 f-size14 hbfb">
+    <view class="flex-a-center m-b10 border_b p-b10" wx:for="{{comment}}" wx:key="index">
+      <view>
+        <image class="head_pic" src="{{imgUrl+item.author.avatar}}"></image>
+      </view>
+      <view class="m-l10">
+        <view class="nickname f-size14">{{item.author.nickname}}</view>
+        <view class="f-size12 tc_9 m-t10 sl-one">{{item.content}}</view>
+      </view>
+    </view>
+    <view class="flex-j-center m-b10 p-b10">
+     <view class="f-size12 tc_9 m-t10 t-a-center">{{noDataText}}</view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,18 @@
+<view class="p-10">
+  <view class="p_fixed t_dv p-t10 bc-w">
+    <top bindsaveHistory="saveHistory" searchValue="{{searchValue}}" bindclearShow="clearShow"
+      clearShow="{{clearShow}}">
+    </top>
+  </view>
+  <view style="margin-top:100rpx">
+    <view wx:if="{{show}}" class="m-t20">
+      <datalist wx:if="books" books="{{books}}" imgUrl="{{imgUrl}}" noDataText="{{noDataText}}"></datalist>
+    </view>
+    <view wx:else>
+      <everybody bindsaveHistory="saveHistory"></everybody>
+      <view wx:if="{{list.length>0}}">
+        <history list="{{list}}" bindclearHistory="clearHistory" bindsaveHistory="saveHistory"></history>
+      </view>
+    </view>
+  </view>
+</view>

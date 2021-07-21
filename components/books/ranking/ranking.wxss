@@ -1,0 +1,9 @@
+@import "../../../styles/common.wxss";
+
+.t_c {
+  color: #7f7f7f;
+}
+.category_img {
+  width: 60rpx;
+  height: 60rpx;
+}

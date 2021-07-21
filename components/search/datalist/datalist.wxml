@@ -1,0 +1,16 @@
+<view wx:if="{{books.length>0}}">
+  <view class="flex-j-between m-b10 search_item border_b p-b10" wx:for="{{books}}" wx:key="index" bindtap="goto"
+    data-id="{{item._id}}">
+    <view class="book_img">
+      <image class="wbfb hbfb" src="{{imgUrl+item.cover}}"></image>
+    </view>
+    <view class="m-l10 lh20 content_dv">
+      <view>{{item.title}}</view>
+      <view class="f-size12 p-tb10 t_c ">{{item.author}}</view>
+      <view class="f-size12 sl-three t_c ">{{item.shortIntro}}</view>
+      <view class="tc_orange p-tb10 f-size12">最近收藏:{{item.latelyFollower}}</view>
+    </view>
+  </view>
+  <view class="f-size12 tc_9 m-t10 t-a-center">{{noDataText}}</view>
+</view>
+<view wx:else class="f-size12 tc_9 m-t10 t-a-center">暂无数据...</view>

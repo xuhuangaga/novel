@@ -1,0 +1,25 @@
+<view class="flex-j-between a-center p-t10 p-l-r10">
+  <view>
+    <image src="../../assets/images/edit.png" class="edit" wx:if="{{!isEdit}}" bindtap="edit"></image>
+    <image src="../../assets/images/checked.png" class="edit" wx:else bindtap="edit"></image>
+  </view>
+  <view class="flex-a-center">
+    <view class="help f-size14" bindtap="help">
+      帮助
+    </view>
+    <image src="../../assets/images/refresh.png" class="edit" bindtap="refresh"></image>
+  </view>
+</view>
+<view wx:if="{{list.length>0}}">
+  <view class="flex-a-center f-wrap p-l-r10 p-b10 wbfb m-b10">
+    <view wx:for="{{list}}" wx:key="index" class="p-relative p-r10 m-b10 m-t10 p-b10" bindtap="goto" data-id="{{item._id}}">
+      <image src="{{imgUrl+item.cover}}" class="bookshelf {{isEdit?'move':''}}"></image>
+      <view class="m-t-b5 f-size12 d-b-title" style="width:220rpx">
+      <view>{{item.title}}</view>
+      <view class="tc_9 m-t5">更新至:{{item.lastChapter}}</view>
+      </view>
+      <image class="clear {{isEdit?'block':''}}" src="../../assets/images/close.png" catchtap="clear" data-id="{{item._id}}"></image>
+    </view>
+  </view>
+</view>
+<view wx:else class="t-a-center p-20 m-20 f-size14">主人还没收藏书籍哦，请去书城收藏吧!</view>

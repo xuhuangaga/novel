@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tabs":"../../components/tabs/tabs",
+    "detail":"../../components/books/detail/detail",
+    "comment":"../../components/books/comment/comment"
+  },
+  "navigationBarTitleText": "详情"
+}

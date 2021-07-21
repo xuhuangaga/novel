@@ -1,0 +1,11 @@
+@import "../../../styles/common.wxss";
+.catalogue {
+  background-color: #f7f7f7;
+}
+.catalogue image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.d-b-title {
+  height: 35rpx;
+}

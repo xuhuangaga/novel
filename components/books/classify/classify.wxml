@@ -1,0 +1,17 @@
+<view wx:if="{{obj}}">
+  <view wx:for="{{obj}}" wx:key="*this" wx:for-index="key">
+    <view wx:if="{{key !=='ok'}}">
+      <view class="p-10 t_c" wx:if="{{key==='male'}}">男生</view>
+      <view class="p-10 t_c" wx:elif="{{key==='female'}}">女生</view>
+      <view class="p-10 t_c" wx:elif="{{key==='picture'}}">玄幻</view>
+      <view class="p-10 t_c" wx:else>出版</view>
+    </view>
+    <view class="flex-a-center f-wrap">
+      <view wx:for="{{item}}" wx:key="index" class="t-a-center p-10 class_dv"  bindtap="activeItem" data-item="{{item}}" data-key="{{key}}">
+        <view>{{item.name}}</view>
+        <view class="t_c f-size12 m-t5">{{item.bookCount}}本</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:else class="f-size12 tc_9 m-t10 t-a-center">暂无数据...</view>

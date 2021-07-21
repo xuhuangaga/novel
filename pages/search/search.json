@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "top":"../../components/search/top/top",
+    "history":"../../components/search/history/history",
+    "everybody":"../../components/search/everybody/everybody",
+    "datalist":"../../components/search/datalist/datalist"
+  },
+  "navigationBarTitleText": "搜索"
+}

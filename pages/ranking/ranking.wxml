@@ -1,0 +1,18 @@
+<view class="f-size14">
+  <!-- 有周榜 月榜  总榜  页面上才显示顶部tab切换 -->
+  <tabs wx:if="{{arr}}" arr="{{arr}}" bindactive="active" activeIndex="{{activeIndex}}" class="p_fixed wbfb"></tabs>
+  <view wx:if="{{books.length>0}}" class="{{arr?'m-t-tabs':''}} p-10">
+    <view bindtap="goto" data-id="{{item._id}}" class="flex-j-between m-b10 search_item border_b p-b10"
+      wx:for="{{books}}" wx:key="index">
+      <view class="book_img">
+        <image class="wbfb hbfb" src="{{imgUrl+item.cover}}"></image>
+      </view>
+      <view class="m-l10 lh20 content_dv">
+        <view>{{item.title}}</view>
+        <view class="f-size12 p-tb10 t_c ">{{item.author}}</view>
+        <view class="f-size12 sl-three t_c ">{{item.shortIntro}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="f-size12 tc_9 m-t10 t-a-center {{arr?'m-t-tabs':''}}">暂无数据...</view>
+</view>

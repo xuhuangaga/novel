@@ -1,0 +1,7 @@
+<view class="flex-j-around" style="background-color:{{bgc}};border-bottom:{{borderB}}">
+    <view bindtap="active" data-index="{{index}}" wx:for="{{arr}}" wx:key="index" class="tab_dv  flex-j-center">
+      <view class="tab p-10 {{index===activeIndex?'active_item':''}}">
+        {{index===1?item.name+total:item.name}}
+      </view>
+    </view>
+  </view>
